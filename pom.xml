@@ -16,7 +16,7 @@
 		<cxf.version>2.2.6</cxf.version>
 		<spring-version>3.0.1.RELEASE</spring-version>
 		<commons-logging-version>1.1.1</commons-logging-version>
-		<drools.version>7.74.1.Final</drools.version>
+		<drools.version>8.44.2.Final</drools.version>
 		<java.module.name>org.drools.ecj</java.module.name>
 		<maven.compiler.version>3.14.0</maven.compiler.version>
 	</properties>
@@ -35,18 +35,14 @@
 				<version>${project.version}</version>
 			</dependency>
 			<dependency>
-				<groupId>org.kiegroup</groupId>
-				<artifactId>cost-calculation-extension</artifactId>
-				<version>${project.version}</version>
-			</dependency>
-			<dependency>
 				<groupId>joda-time</groupId>
 				<artifactId>joda-time</artifactId>
 				<version>2.2</version>
 			</dependency>
 			<dependency>
-				<groupId>org.jbpm</groupId>
-				<artifactId>jbpm-bpmn2</artifactId>
+				<groupId>org.kie.kogito</groupId>
+				<artifactId>jbpm-flow</artifactId>
+				<version>1.44.1.Final</version>
 			</dependency>
 
 
@@ -65,11 +61,6 @@
 				<scope>test</scope>
 			</dependency>
 
-			<dependency>
-				<groupId>org.jbpm</groupId>
-				<artifactId>jbpm-bpmn2</artifactId>
-				<version>${drools.version}</version>
-			</dependency>
 		</dependencies>
 
 	</dependencyManagement>
@@ -88,8 +79,8 @@
 			<artifactId>drools-ecj</artifactId>
 		</dependency>
 		<dependency>
-			<groupId>org.jbpm</groupId>
-			<artifactId>jbpm-bpmn2</artifactId>
+			<groupId>org.kie.kogito</groupId>
+			<artifactId>jbpm-flow</artifactId>
 		</dependency>
 		<dependency>
 			<groupId>junit</groupId>
