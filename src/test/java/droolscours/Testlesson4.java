@@ -42,6 +42,45 @@ public class Testlesson4 {
 		sessionStatefull.startProcess("RF1");
 		sessionStatefull.fireAllRules();
 	}
+	@Test
+	public void testRuleFlow2() {
+		sessionStatefull = KnowledgeSessionHelper
+				.getStatefulKnowledgeSessionForJBPM(kieContainer, "lesson4-session");
+		OutputDisplay display = new OutputDisplay();
+		sessionStatefull.setGlobal("showResult", display);
+		Account a = new Account();
+		sessionStatefull.insert(a);
+		sessionStatefull.fireAllRules();
+	}
+	@Test
+	public void testRuleFlow3() {
+		sessionStatefull = KnowledgeSessionHelper
+				.getStatefulKnowledgeSessionForJBPM(kieContainer, "lesson4a-session");
+		OutputDisplay display = new OutputDisplay();
+		sessionStatefull.setGlobal("showResult", display);
+		Account a = new Account();
+		a.setBalance(500);
+		sessionStatefull.insert(a);
+		AccountingPeriod period = new AccountingPeriod();
+		sessionStatefull.insert(period);
 
+		sessionStatefull.fireAllRules();
+
+	}
+	@Test
+	public void testRuleFlow4() {
+		sessionStatefull = KnowledgeSessionHelper
+				.getStatefulKnowledgeSessionForJBPM(kieContainer, "lesson4a-session");
+		OutputDisplay display = new OutputDisplay();
+		sessionStatefull.setGlobal("showResult", display);
+		Account a = new Account();
+		a.setBalance(1500);
+		sessionStatefull.insert(a);
+		AccountingPeriod period = new AccountingPeriod();
+		sessionStatefull.insert(period);
+
+		sessionStatefull.fireAllRules();
+
+	}
 
 }
