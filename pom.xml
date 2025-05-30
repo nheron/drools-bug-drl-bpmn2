@@ -16,7 +16,7 @@
 		<cxf.version>2.2.6</cxf.version>
 		<spring-version>3.0.1.RELEASE</spring-version>
 		<commons-logging-version>1.1.1</commons-logging-version>
-		<drools.version>10.0.0</drools.version>
+		<drools.version>10.1.0-aletyx-rc.2</drools.version>
 		<java.module.name>org.drools.ecj</java.module.name>
 		<maven.compiler.version>3.14.0</maven.compiler.version>
 	</properties>
@@ -30,11 +30,7 @@
 				<scope>import</scope>
 			</dependency>
 
-			<dependency>
-				<groupId>org.kiegroup</groupId>
-				<artifactId>cost-calculation-extension</artifactId>
-				<version>${project.version}</version>
-			</dependency>
+
 			<dependency>
 				<groupId>joda-time</groupId>
 				<artifactId>joda-time</artifactId>
@@ -108,5 +104,7 @@
 				<extensions>true</extensions>
 			</plugin>
 		</plugins>
+
 	</build>
+
 </project>
